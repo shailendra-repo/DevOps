@@ -1,0 +1,22 @@
+pipeline{
+    agent any
+    stages(
+        stage("Build Dev){
+            when{
+                branch: "dev"
+            }
+            steps{
+                echo "Dev is being built"
+            }
+
+        }
+        stage("Main branch"){
+            when{
+                branch: "main"
+            }
+            steps{
+                echo " Main is being built"
+            }
+        }
+    )
+}
