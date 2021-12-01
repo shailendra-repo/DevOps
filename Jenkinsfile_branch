@@ -3,7 +3,7 @@ pipeline{
     stages(
         stage("Build Dev"){
             when{
-                branch: "dev1"
+                branch "dev1"
             }
             steps{
                 echo "Dev is being built"
@@ -12,7 +12,7 @@ pipeline{
         }
         stage("Main branch"){
             when{
-                branch: "main"
+                branch "main"
             }
             steps{
                 echo " Main is being built"
